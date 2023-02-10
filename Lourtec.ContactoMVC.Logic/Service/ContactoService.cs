@@ -12,9 +12,9 @@ namespace Lourtec.ContactoMVC.Logic.Service
     public class ContactoService : IContactoService
     {
         private readonly IGenericRepository<Contacto> _contactoService;
-        public ContactoService(IGenericRepository<Contacto> _contactoService)
+        public ContactoService(IGenericRepository<Contacto> contactoService)
         {
-
+            _contactoService = contactoService;
         }
         public async Task<bool> Create(Contacto contacto)
         {
